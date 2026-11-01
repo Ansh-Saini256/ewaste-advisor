@@ -1,0 +1,35 @@
+:root { --bg:#f4f7f4; --card:#fff; --ink:#1b2a1f; --muted:#5a6b5e; --green:#2e7d4f; --line:#d5e0d7;
+        --repair:#2563a8; --resell:#b26a00; --donate:#7a3fa0; --recycle:#2e7d4f; --warn:#b3261e; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#121a14; --card:#1b261e; --ink:#e8f0ea; --muted:#9db0a2; --line:#31423a; --green:#5cc489;
+          --repair:#7db3f0; --resell:#f0b45c; --donate:#c79be6; --recycle:#5cc489; --warn:#ff8a80; }
+}
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--ink); line-height:1.5; }
+main { max-width: 560px; margin: 0 auto; padding: 20px 16px 40px; }
+h1 { margin: 8px 0 4px; font-size: 1.7rem; }
+.sub { color: var(--muted); margin-top: 0; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-top: 16px; }
+h2 { margin: 0 0 12px; font-size: 1.2rem; }
+h3 { margin: 16px 0 6px; font-size: 1rem; }
+.field { margin-bottom: 14px; }
+label { display:block; font-weight:600; margin-bottom:4px; }
+.opt { font-weight:400; color:var(--muted); }
+select, input { width:100%; padding:10px; font-size:1rem; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); }
+button { width:100%; padding:12px; font-size:1rem; font-weight:600; border:0; border-radius:8px; background:var(--green); color:#fff; cursor:pointer; }
+button:focus-visible, select:focus-visible, input:focus-visible { outline:3px solid var(--green); outline-offset:2px; }
+.errors { color:var(--warn); margin-bottom:10px; font-weight:600; }
+.result { border-left: 6px solid var(--recycle); }
+.result.repair { border-left-color: var(--repair); }
+.result.resell { border-left-color: var(--resell); }
+.result.donate { border-left-color: var(--donate); }
+.result.recycle { border-left-color: var(--recycle); }
+.kicker { margin:0; color:var(--muted); font-size:.85rem; text-transform:uppercase; letter-spacing:.05em; }
+.result h2 { font-size: 1.6rem; margin: 2px 0 8px; }
+.why { margin-top: 0; }
+.warn { background: rgba(179,38,30,.12); border:1px solid var(--warn); color:var(--warn); border-radius:8px; padding:10px; margin:10px 0; font-weight:600; }
+.alts { color: var(--muted); }
+ol { padding-left: 20px; margin: 0; }
+li { margin-bottom: 6px; }
+.basis { margin-top: 14px; font-size:.8rem; color: var(--muted); }
+footer { margin-top: 20px; font-size:.8rem; color: var(--muted); }

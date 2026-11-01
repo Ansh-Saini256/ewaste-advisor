@@ -1,0 +1,21 @@
+PASS  TC01 new phone, works  -> resell (R03)
+PASS  TC02 mid-age laptop, works  -> resell (R04)
+PASS  TC03 old laptop, works  -> donate (R05)
+PASS  TC04 young tablet, minor issue  -> repair (R06)
+PASS  TC05 old desktop, minor issue  -> recycle (R07)
+PASS  TC06 young phone, faulty  -> repair (R08)
+PASS  TC07 mid TV, faulty  -> repair (R09)
+PASS  TC08 old phone, dead  -> recycle (R10)
+PASS  TC09 printer, faulty  -> recycle (R11)
+PASS  TC10 charger, works  -> donate (R12)
+PASS  TC11 swollen battery overrides  -> recycle (R01)
+PASS  TC12 warranty, faulty laptop  -> repair (R02)
+PASS  TC13 power bank hazard  -> recycle (R01)
+PASS  TC14 boundary: age = lifespan  -> resell (R04)
+PASS  TC15 boundary: just over lifespan  -> donate (R05)
+PASS  TC16 negative age rejected  -> rejected
+PASS  TC17 missing device rejected  -> rejected
+PASS  TC18 non-numeric age rejected  -> rejected
+PASS  TC19 rule coverage: 216 combinations, 0 gaps
+
+19 passed, 0 failed

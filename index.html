@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-Waste Advisor</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>E-Waste Advisor</h1>
+    <p class="sub">Not sure what to do with an old device? Answer three questions and get a clear suggestion: repair, resell, donate or recycle.</p>
+  </header>
+
+  <section class="card" aria-labelledby="q-title">
+    <h2 id="q-title">About your device</h2>
+    <div class="field">
+      <label for="device">1. What is it?</label>
+      <select id="device"><option value="">Choose a device</option></select>
+    </div>
+    <div class="field">
+      <label for="age">2. How old is it (in years)?</label>
+      <input id="age" type="number" min="0" max="30" step="0.5" inputmode="decimal" placeholder="e.g. 3">
+    </div>
+    <div class="field">
+      <label for="condition">3. What condition is it in?</label>
+      <select id="condition"><option value="">Choose a condition</option></select>
+    </div>
+    <div class="field">
+      <label for="warranty">Is it still under warranty? <span class="opt">(optional)</span></label>
+      <select id="warranty">
+        <option value="no">No / not sure</option>
+        <option value="yes">Yes</option>
+      </select>
+    </div>
+    <div id="errors" class="errors" role="alert" hidden></div>
+    <button id="go" type="button">Get advice</button>
+  </section>
+
+  <section id="result" class="card result" aria-live="polite" hidden>
+    <p class="kicker">Our suggestion</p>
+    <h2 id="r-action"></h2>
+    <p id="r-why" class="why"></p>
+    <div id="r-warn" class="warn" hidden></div>
+    <p id="r-alts" class="alts"></p>
+    <h3>What to do next</h3>
+    <ol id="r-steps"></ol>
+    <p class="basis">Rule <span id="r-rule"></span> &middot; Based on: <span id="r-basis"></span></p>
+  </section>
+
+  <footer>
+    <p>Privacy: nothing you enter leaves your browser. No account, no tracking, nothing is stored.</p>
+    <p>This is general guidance, not legal advice. Check local rules and use authorised recyclers.</p>
+  </footer>
+</main>
+<script src="js/rules.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
